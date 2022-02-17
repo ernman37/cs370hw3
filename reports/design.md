@@ -40,12 +40,22 @@
 - Close write end of pipe and exit program
 
 ### Plan 
-- Enter
+- Enter main with **1** arg (file name)
+- check to make sure file exists
+   - if it doesn't then exit and return 'FAIL' Through pipe
+- Read each line of file, parse line to integer and keep running sum
+- pipe the sum
+- return 0
 
 
 ## Remaining files
-### Description 
 > `Lucas.c`, `HarmonicSeries.c` and `HexagonalSeries.c`
+### Description 
 - Do as they did in HW2 but use shared memory for return
 - Should run concurrently not sequentially
    - Run all at the same time
+
+### Plan 
+- Do as previously done but print every number in the sum up to number N first
+- Return numbers through pipe
+- still return the same values as before (HW2)
